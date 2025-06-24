@@ -1,0 +1,34 @@
+name: gh pages deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# run build and page refresh
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Npm setup and deploy
+        shell: bash
+        run: |
+          npm install
+          npm run deploy
+
+      - name: Build GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
+        # uses: actions/deploy-pages@v4
