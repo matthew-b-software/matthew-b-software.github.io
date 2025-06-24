@@ -23,6 +23,7 @@ jobs:
       - name: Npm setup and deploy
         shell: bash
         run: |
+          dir
           npm install
           npm run deploy
 
