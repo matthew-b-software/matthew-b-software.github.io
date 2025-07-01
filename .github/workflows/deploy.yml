@@ -26,9 +26,9 @@ jobs:
           # Needed for gh-pages push in "npm run deploy"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           npm install
-          npm run deploy
+          npm run deploy -- --repo "https://x-access-token:${GITHUB_TOKEN}@github.com/matthew-b-software/matthew-b-software.github.io.git"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
