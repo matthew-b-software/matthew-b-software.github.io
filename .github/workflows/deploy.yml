@@ -23,6 +23,10 @@ jobs:
       - name: Npm setup and deploy
         shell: bash
         run: |
+          # Needed for gh-pages push in "npm run deploy"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
           npm install
           npm run deploy
 
