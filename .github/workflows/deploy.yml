@@ -6,29 +6,23 @@ on:
       - main
   workflow_dispatch:
 
-# run build and page refresh
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-
-      - name: Npm setup and deploy
-        shell: bash
+      - name: Build page
         run: |
-          npm install
-          npm run deploy
+          npm ci
+          npm run build
 
-      - name: Build GitHub pages
+      - name: Deploy page
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: .
-        # uses: actions/deploy-pages@v4
+          folder: dist
