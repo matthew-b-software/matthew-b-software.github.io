@@ -6,34 +6,23 @@ on:
       - main
   workflow_dispatch:
 
-# run build and page refresh
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-
-      - name: Npm setup and deploy
-        shell: bash
+      - name: Build page
         run: |
-          # Needed for gh-pages push in "npm run deploy"
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm ci
+          npm run build
 
-          npm install
-          npm run deploy -- --repo "https://x-access-token:${GITHUB_TOKEN}@github.com/matthew-b-software/matthew-b-software.github.io.git"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build GitHub pages
+      - name: Deploy page
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: .
+          folder: dist
