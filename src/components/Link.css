@@ -1,0 +1,12 @@
+.SocialLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.SocialLink img {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
