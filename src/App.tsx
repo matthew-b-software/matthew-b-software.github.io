@@ -5,10 +5,10 @@ import ContactInfo from './components/ContactInfo'
 function App() {
 
   return (
-    <>
+    <div id='MainContainer'>
       <h1> website development is in progress </h1>
       <ContactInfo />
-    </>
+    </div>
   )
 }
 
