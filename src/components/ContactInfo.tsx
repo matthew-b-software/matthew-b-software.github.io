@@ -1,5 +1,7 @@
 import Link from './Link'
-import LinkedInLogo from "../assets/linkedin_logo.png"
+import LinkedInLogo from "../assets/linkedin_Logo.png"
+import GitHubLogo from "../assets/GitHub_Logo.png"
+import EmailLogo from "../assets/Email_Logo.png"
 
 const links = [
     {
@@ -8,13 +10,25 @@ const links = [
         logo_src: LinkedInLogo,
         logo_alt: "LinkedIn Logo",
     },
+    {
+        link: "https://github.com/matthew-b-software",
+        link_text: "GitHub",
+        logo_src: GitHubLogo,
+        logo_alt: "GitHub Logo",
+    },
+    {
+        link: "mailto:matthewbsoftware@gmail.com",
+        link_text: "matthewbsoftware@gmail.com",
+        logo_src: EmailLogo,
+        logo_alt: "Email Logo",
+    }
 ]
 
 /** This component shall contain my contact info (links, email, & phone) */
 function ContactInfo() {
     return (
         <>
-            <h1>Contact Me</h1>
+            <h1>Follow or Contact Me</h1>
             <ul>
                 {links.map((item, index) => (
                 <li key={index}>
