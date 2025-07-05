@@ -1,3 +1,4 @@
+import './ContactInfo.css'
 import Link from './Link'
 import LinkedInLogo from "../assets/linkedin_Logo.png"
 import GitHubLogo from "../assets/GitHub_Logo.png"
@@ -29,7 +30,7 @@ function ContactInfo() {
     return (
         <>
             <h1>Follow or Contact Me</h1>
-            <ul>
+            <ul id='ContactList'>
                 {links.map((item, index) => (
                 <li key={index}>
                 <Link 
