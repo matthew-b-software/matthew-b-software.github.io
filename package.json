@@ -2,7 +2,7 @@
   "name": "my-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://matthew-b-software.github.io/my-website",
+  "homepage": ".",
   "type": "module",
   "scripts": {
     "predeploy": "tsc -b && vite build",

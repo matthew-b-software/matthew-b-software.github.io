@@ -1,8 +1,8 @@
 import './ContactInfo.css'
 import Link from './Link'
-import LinkedInLogo from "../assets/linkedin_Logo.png"
-import GitHubLogo from "../assets/GitHub_Logo.png"
-import EmailLogo from "../assets/Email_Logo.png"
+import LinkedInLogo from "/src/assets/LinkedIn_Logo.png"
+import GitHubLogo from "/src/assets/GitHub_Logo.png"
+import EmailLogo from "/src/assets/Email_Logo.png"
 
 const links = [
     {
