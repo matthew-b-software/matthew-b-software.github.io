@@ -1,0 +1,29 @@
+.SocialLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+    color: var(--custom-black);
+}
+
+.SocialLink img {
+    margin-right: 15px;
+
+    display: flex;
+    align-items: center;
+
+    height: auto;
+    width: auto;
+    max-height: 2.5em;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--custom-green)
+}
