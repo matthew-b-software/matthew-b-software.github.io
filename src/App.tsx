@@ -1,4 +1,3 @@
-/** import { useState } from 'react' */
 import './App.css'
 import ContactInfo from './components/ContactInfo'
 import ProjectGrid from './components/ProjectGrid'
