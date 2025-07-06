@@ -2,9 +2,8 @@ const Projects = [
     {
         title: "test",
         description: "test",
-        img_src: "test",
+        img_src: "/src/assets/Test_Img.jpg",
         img_alt: "test",
-        link: "test",
         subject: "ai"
     }
 ]

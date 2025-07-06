@@ -1,0 +1,17 @@
+.ProjectItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+.ProjectItem div {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ProjectItem button {
+    border: none;
+    cursor: pointer;
+}

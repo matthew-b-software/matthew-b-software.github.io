@@ -6,7 +6,7 @@ import Projects from  '../data/ProjectGrid.ts'
 function ProjectGrid() {
 
     const [Subject, setSubject] = useState<string>("all")
-    const [filteredProjects, setFilteredProjects] = useState(Projects)
+    const [SelectedProj, setSelectedProj] = useState(-1)
 
     return (
         <>
@@ -32,11 +32,16 @@ function ProjectGrid() {
             </div>
 
             <div id="ProjectGrid">
-                {Projects.map((item) => (
-                <ProjectItem />
+                {Projects.map((item, index) => (
+                <ProjectItem 
+                            title={item.title} 
+                            description={item.description} 
+                            img_src={item.img_src} 
+                            img_alt={item.img_alt} 
+                            selected={SelectedProj === index}
+                            />
                 ))}
             </div>
-
         </>
     )
 }
