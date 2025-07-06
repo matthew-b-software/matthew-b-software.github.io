@@ -33,6 +33,7 @@ function ProjectGrid() {
 
             <div id="ProjectGrid">
                 {Projects.map((item, index) => (
+                (Subject === "all" || item.subject === Subject) &&
                 <ProjectItem 
                             title={item.title} 
                             description={item.description} 
