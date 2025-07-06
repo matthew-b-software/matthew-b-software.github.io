@@ -35,11 +35,13 @@ function ProjectGrid() {
                 {Projects.map((item, index) => (
                 (Subject === "all" || item.subject === Subject) &&
                 <ProjectItem 
+                            key={index}
                             title={item.title} 
                             description={item.description} 
                             img_src={item.img_src} 
                             img_alt={item.img_alt} 
                             selected={SelectedProj === index}
+                            onClick={() => setSelectedProj(SelectedProj === index ? -1 : index)}
                             />
                 ))}
             </div>
