@@ -16,7 +16,7 @@ function Timeline() {
                 title="test" 
                 date="test" 
                 description="test" 
-                icon_src="test" 
+                icon_src="/public/favicon.ico" 
                 icon_alt="test" 
                 selected={true} 
                 onClick={ () => setSelected} />

@@ -1,0 +1,33 @@
+.TimelineItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--custom-black);
+}
+
+.MainRow {
+    display: flex;
+    align-items: center;
+}
+
+.TimelineItem p {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+.TimelineButton {
+    cursor:pointer;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+}
+
+.TimelineButton:hover {
+    color: var(--custom-green)
+}
