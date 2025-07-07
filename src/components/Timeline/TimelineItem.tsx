@@ -19,7 +19,7 @@ function TimelineItem({ title, date, description, icon_src, icon_alt, selected, 
                 <img src={icon_src} alt={icon_alt}/>
                 <button className="TimelineButton" onClick={onClick}>
                     <p>{date + ": " + title}</p>
-                    <p>&#x2193;</p>
+                    <p>{selected ? "\u2191": "\u2193"}</p>
                 </button>
             </div>
             <div>
