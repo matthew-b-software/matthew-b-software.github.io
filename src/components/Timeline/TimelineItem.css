@@ -8,6 +8,14 @@
     color: var(--custom-black);
 }
 
+.TimelineItem img {
+    margin-bottom: 10px;
+    height: auto;
+    width: auto;
+    max-height: 2.5em;
+    max-width: 100%;
+}
+
 .MainRow {
     display: flex;
     align-items: center;

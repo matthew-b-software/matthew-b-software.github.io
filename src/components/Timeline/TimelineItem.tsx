@@ -22,9 +22,7 @@ function TimelineItem({ title, date, description, icon_src, icon_alt, selected, 
                     <p>{selected ? "\u2191": "\u2193"}</p>
                 </button>
             </div>
-            <div>
-                {selected && <p>{description}</p>}
-            </div>
+            {selected && <div>{description}</div>}
         </div>
     )
 }
