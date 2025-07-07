@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ProjectItem from './ProjectItem'
 import Projects from  '../data/ProjectGrid.ts'
+import "./ProjectGrid.css"
 
 /** This component shall contain experiences and shall work for work, proj, and school sections */
 function ProjectGrid() {
@@ -15,19 +16,19 @@ function ProjectGrid() {
             <div id="SubjectSelect">
                 <label>
                     <input type="radio" name="subject"  checked={Subject === "all"} onChange={() => setSubject("all")} />
-                    All
+                    <span>All</span>
                 </label>
                 <label>
                     <input type="radio" name="subject" checked={Subject === "AI"} onChange={() => setSubject("AI")} />
-                    AI
+                    <span>AI</span>
                 </label>
                 <label>
                     <input type="radio" name="subject" checked={Subject === "Embedded"} onChange={() => setSubject("Embedded")} />
-                    Embedded
+                    <span>Embedded</span>
                 </label>
                 <label>
                     <input type="radio" name="subject" checked={Subject === "DevOps"} onChange={() => setSubject("DevOps")} />
-                    DevOps
+                    <span>DevOps</span>
                 </label>
             </div>
 
