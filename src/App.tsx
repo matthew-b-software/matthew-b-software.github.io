@@ -1,7 +1,7 @@
 import './App.css'
 import ContactInfo from './components/ContactInfo'
 import ProjectGrid from './components/ProjectGrid'
-import Timeline from './components/Timeline'
+import Timeline from './components/Timeline/Timeline'
 
 
 function App() {
