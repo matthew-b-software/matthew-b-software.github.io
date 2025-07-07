@@ -1,34 +1,14 @@
 import './ContactInfo.css'
 import Link from './Link'
-
-const links = [
-    {
-        link: "https://www.linkedin.com/in/matthew-beitler/",
-        link_text: "LinkedIn",
-        logo_src: "/src/assets/LinkedIn_Logo.png",
-        logo_alt: "LinkedIn Logo",
-    },
-    {
-        link: "https://github.com/matthew-b-software",
-        link_text: "GitHub",
-        logo_src: "/src/assets/GitHub_Logo.png",
-        logo_alt: "GitHub Logo",
-    },
-    {
-        link: "mailto:matthewbsoftware@gmail.com",
-        link_text: "matthewbsoftware@gmail.com",
-        logo_src: "/src/assets/Email_Logo.png",
-        logo_alt: "Email Logo",
-    }
-]
+import Links from '../data/ContactInfo.ts'
 
 /** This component shall contain my contact info (links, email, & phone) */
 function ContactInfo() {
     return (
         <>
-            <h1>Follow or Contact Me</h1>
+            <h1>Connect with Me</h1>
             <ul id='ContactList'>
-                {links.map((item, index) => (
+                {Links.map((item, index) => (
                 <li key={index}>
                 <Link 
                     link={item.link}
