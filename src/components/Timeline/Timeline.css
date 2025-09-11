@@ -1,0 +1,12 @@
+#Timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.TimelineConnector {
+    width: 2px;
+    height: 20px;
+    margin-left: 29px; /* Center align with TimelineItem icon */
+    border-left: 2px solid var(--custom-green);
+}
