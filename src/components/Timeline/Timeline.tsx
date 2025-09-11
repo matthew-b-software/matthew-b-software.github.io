@@ -14,16 +14,21 @@ function Timeline() {
 
             <div id="Timeline">
                 {TimelineData.map((item, index) => (
-                <TimelineItem 
-                    key={index}
-                    title={item.title} 
-                    date={item.date}
-                    description={item.description} 
-                    icon_src={item.icon_src}
-                    icon_alt={item.icon_alt}
-                    selected={index === Selected} 
-                    onClick={ () => setSelected(Selected === index ? -1 : index)} />
-                ))}
+                <>
+                    <TimelineItem 
+                        key={index}
+                        title={item.title} 
+                        date={item.date}
+                        description={item.description} 
+                        icon_src={item.icon_src}
+                        icon_alt={item.icon_alt}
+                        selected={index === Selected} 
+                        onClick={ () => setSelected(Selected === index ? -1 : index)} 
+                    />
+
+                    {index != (TimelineData.length - 1) && <div className="TimelineConnector"></div>}
+                </>
+                ))} 
             </div>
         </>
     )
