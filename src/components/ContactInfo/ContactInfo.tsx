@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
-import Link from './Link'
-import Links from '../data/ContactInfo.ts'
+import Link from './Link.tsx'
+import Links from '../../data/ContactInfo.ts'
 
 /** This component shall contain my contact info (links, email, & phone) */
 function ContactInfo() {

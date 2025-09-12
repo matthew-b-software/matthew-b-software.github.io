@@ -1,5 +1,5 @@
 import './App.css'
-import ContactInfo from './components/ContactInfo'
+import ContactInfo from './components/ContactInfo/ContactInfo'
 import ProjectGrid from './components/ProjectGrid'
 import Timeline from './components/Timeline/Timeline'
 
