@@ -1,4 +1,4 @@
-import './ContactInfo.css'
+import { css } from '@emotion/react'
 import Link from './Link'
 import Links from '../data/ContactInfo.ts'
 
@@ -7,7 +7,7 @@ function ContactInfo() {
     return (
         <>
             <h1>Connect with Me</h1>
-            <ul id='ContactList'>
+            <ul css={ListStyle}>
                 {Links.map((item, index) => (
                 <li key={index}>
                 <Link 
@@ -22,5 +22,9 @@ function ContactInfo() {
         </>
     )
 }
+
+const ListStyle = css({
+    listStyle: 'none',
+})
 
 export default ContactInfo
