@@ -1,7 +1,7 @@
 import { useState } from "react"
+import { css } from '@emotion/react'
 import TimelineData from "../../data/Timeline.ts"
 import TimelineItem from "./TimelineItem"
-import "./Timeline.css"
 
 /** This component shall contain a timeline of my career */
 function Timeline() {
@@ -12,7 +12,7 @@ function Timeline() {
         <>
             <h1>Career</h1>
 
-            <div id="Timeline">
+            <div css={TimelineStyle}>
                 {TimelineData.map((item, index) => (
                 <>
                     <TimelineItem 
@@ -26,12 +26,25 @@ function Timeline() {
                         onClick={ () => setSelected(Selected === index ? -1 : index)} 
                     />
 
-                    {index != (TimelineData.length - 1) && <div className="TimelineConnector"></div>}
+                    {index != (TimelineData.length - 1) && <div css={TimelineConnector}></div>}
                 </>
                 ))} 
             </div>
         </>
     )
 }
+
+const TimelineStyle = css({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start', 
+})
+
+const TimelineConnector = css({
+    width: '2px',
+    height: '20px',
+    marginLeft: '29px', /* Center align with TimelineItem icon */
+    borderLeft: '2px solid var(--custom-green)'
+})
 
 export default Timeline
