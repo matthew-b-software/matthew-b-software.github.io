@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css, Global } from '@emotion/react'
 import ContactInfo from './components/ContactInfo/ContactInfo'
 import ProjectGrid from './components/ProjectGrid/ProjectGrid'
 import Timeline from './components/Timeline/Timeline'
@@ -8,7 +8,23 @@ function App() {
 
   return (
     <div css={AppStyle}>
-      <h1 css={AppHeader}> website development in progress </h1>
+      { /* Define all h1 styles the same */}
+      <Global
+        styles={css({
+          h1: {
+            fontSize: "3.2em",
+            lineHeight: '1.1',
+            color: 'var(--custom-black)',
+
+            /* underline to text */
+            borderBottom: '3px solid var(--custom-green)',
+            paddingBottom: '1rem',
+            marginBottom: '3rem',
+            width: '90%',
+          }
+        })}
+      />
+      <h1> website development in progress </h1>
       <Timeline />
       <ProjectGrid />
       <ContactInfo />
@@ -29,18 +45,6 @@ const AppStyle = css({
   marginBottom: '16rem',
 
   backgroundColor: 'var(--custom-white)',
-})
-
-const AppHeader = css({
-  fontSize: "3.2em",
-  lineHeight: '1.1',
-  color: 'var(--custom-black)',
-
-  /* underline to text */
-  borderBottom: '3px solid var(--custom-green)',
-  paddingBottom: '1rem',
-  marginBottom: '3rem',
-  width: '90%',
 })
 
 export default App
