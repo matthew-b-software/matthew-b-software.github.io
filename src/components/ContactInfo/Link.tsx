@@ -11,7 +11,7 @@ interface Props {
 function Link({ link, link_text, logo_src, logo_alt }: Props) {
     return (
         <a css={SocialLink} href={link} target="_blank" rel={"Visit my " + link_text}>
-            <div css={SocialLinkImgOutline}>
+            <div css={SocialLinkImgContainer}>
                 <img css={SocialLinkImg} src={logo_src} alt={logo_alt} />
             </div>
             {link_text}
@@ -24,6 +24,7 @@ const SocialLink = css({
     alignItems: 'center',
     textDecoration: 'none',
     flexWrap: 'wrap',
+    marginBottom: '5px',
     
     color: 'var(--custom-black)',
     fontSize: '1.5em',
@@ -34,18 +35,14 @@ const SocialLink = css({
     }
 })
 
-const SocialLinkImgOutline = css({
+const SocialLinkImgContainer = css({
+    maxWidth: '2.5em',
+    maxHeight: '2.5em',
     marginRight: '10px',
-    marginBottom: '2px',
-
-    width: '2.5em',
-    height: '2.5em',
+    alignContent: 'center',
 })
 
-const SocialLinkImg = css({
-    display: 'flex',
-    alignItems: 'center',
-    
+const SocialLinkImg = css({  
     maxHeight: '100%',
     maxWidth: '100%',
 })
