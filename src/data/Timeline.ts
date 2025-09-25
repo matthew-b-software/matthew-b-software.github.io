@@ -3,7 +3,7 @@ const TimelineData = [
     {
         title: "Finished an internship at ConMet",
         date: "05/2025",
-        description: "",
+        description: "test test test test",
         icon_src: "/career_imgs/ConMet_Logo.png",
         icon_alt: "ConMet logo",
     },
