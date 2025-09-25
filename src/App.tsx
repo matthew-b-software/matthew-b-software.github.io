@@ -10,19 +10,7 @@ function App() {
     <div css={AppStyle}>
       { /* Define the style of all h1 elements */}
       <Global
-        styles={css({
-          h1: {
-            fontSize: "3.2em",
-            lineHeight: '1.1',
-            color: 'var(--custom-black)',
-
-            /* underline to text */
-            borderBottom: '3px solid var(--custom-green)',
-            paddingBottom: '1rem',
-            marginBottom: '3rem',
-            width: '90%',
-          }
-        })}
+        styles={GlobalStyle}
       />
       <h1> website development in progress </h1>
       <Timeline />
@@ -45,6 +33,20 @@ const AppStyle = css({
   marginBottom: '16rem',
 
   backgroundColor: 'var(--custom-white)',
+})
+
+const GlobalStyle = css ({
+  h1: {
+    fontSize: "3.2em",
+    lineHeight: '1.1',
+    color: 'var(--custom-black)',
+
+    /* underline to text */
+    borderBottom: '3px solid var(--custom-green)',
+    paddingBottom: '1rem',
+    marginBottom: '3rem',
+    width: '90%',
+  }
 })
 
 export default App
