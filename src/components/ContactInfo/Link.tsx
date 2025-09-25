@@ -10,22 +10,47 @@ interface Props {
 /** This component shall contain a link and image to be used in "ContactInfo" */
 function Link({ link, link_text, logo_src, logo_alt }: Props) {
     return (
+        <div css={LinkStyle}>
+            <a css={LinkAnchor} href={link} target="_blank" rel={"Visit my " + link_text}>
+                <div css={LinkImgContainer}>
+                    <img css={LinkImg} src={logo_src} alt={logo_alt} />
+                </div>
+                <p>{link_text}</p>
+            </a>
+        </div>
+
+
+        /*
         <a css={SocialLink} href={link} target="_blank" rel={"Visit my " + link_text}>
-            <div css={SocialLinkImgContainer}>
-                <img css={SocialLinkImg} src={logo_src} alt={logo_alt} />
+            <div css={SocialLinkContent}>
+                <div css={SocialLinkImgContainer}>
+                    <img css={SocialLinkImg} src={logo_src} alt={logo_alt} />
+                </div>
+                {link_text}
             </div>
-            {link_text}
         </a>
+        */
     )
 }
 
-const SocialLink = css({
+const LinkStyle = css({
+    /* 
+        flex and center limit anchor hover
+        to text and img, not the parent div
+     */
     display: 'flex',
     alignItems: 'center',
-    textDecoration: 'none',
+
     flexWrap: 'wrap',
-    marginBottom: '5px',
-    
+    marginBottom: '10px',
+})
+
+const LinkAnchor = css({
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+
+    textDecoration: 'none',
     color: 'var(--custom-black)',
     fontSize: '1.5em',
 
@@ -35,14 +60,14 @@ const SocialLink = css({
     }
 })
 
-const SocialLinkImgContainer = css({
+const LinkImgContainer = css({
     maxWidth: '2.5em',
     maxHeight: '2.5em',
     marginRight: '10px',
     alignContent: 'center',
 })
 
-const SocialLinkImg = css({  
+const LinkImg = css({  
     maxHeight: '100%',
     maxWidth: '100%',
 })
