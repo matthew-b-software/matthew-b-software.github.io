@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div css={AppStyle}>
-      { /* Define all h1 styles the same */}
+      { /* Define the style of all h1 elements */}
       <Global
         styles={css({
           h1: {
