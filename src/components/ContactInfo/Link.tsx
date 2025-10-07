@@ -18,18 +18,6 @@ function Link({ link, link_text, logo_src, logo_alt }: Props) {
                 <p>{link_text}</p>
             </a>
         </div>
-
-
-        /*
-        <a css={SocialLink} href={link} target="_blank" rel={"Visit my " + link_text}>
-            <div css={SocialLinkContent}>
-                <div css={SocialLinkImgContainer}>
-                    <img css={SocialLinkImg} src={logo_src} alt={logo_alt} />
-                </div>
-                {link_text}
-            </div>
-        </a>
-        */
     )
 }
 
@@ -40,6 +28,7 @@ const LinkStyle = css({
      */
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
 
     flexWrap: 'wrap',
     marginBottom: '10px',
