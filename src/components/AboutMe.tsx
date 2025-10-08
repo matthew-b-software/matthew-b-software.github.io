@@ -10,6 +10,8 @@ function AboutMe() {
     return (
         <>
             <h1>About Me</h1>
+            <div></div>
+            <p> temp text </p>
         </>
     )
 }
