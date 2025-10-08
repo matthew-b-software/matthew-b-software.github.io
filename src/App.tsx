@@ -1,7 +1,8 @@
 import { css, Global } from '@emotion/react'
-import ContactInfo from './components/ContactInfo/ContactInfo'
+import AboutMe from './components/AboutMe'
 import ProjectGrid from './components/ProjectGrid/ProjectGrid'
 import Timeline from './components/Timeline/Timeline'
+import ContactInfo from './components/ContactInfo/ContactInfo'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         styles={GlobalStyle}
       />
       <h1> website development in progress </h1>
+      <AboutMe />
       <Timeline />
       <ProjectGrid />
       <ContactInfo />
