@@ -1,4 +1,4 @@
-const links = [
+const AboutMeImgs = [
     {
         img_path: "about_me/me_1.png",
         img_alt: "a picture of me",
@@ -9,4 +9,4 @@ const links = [
     }
 ]
 
-export default links;
+export default AboutMeImgs;

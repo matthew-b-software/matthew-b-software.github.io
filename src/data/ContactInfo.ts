@@ -1,4 +1,4 @@
-const links = [
+const Links = [
     {
         link: "https://github.com/matthew-b-software",
         link_text: "GitHub",
@@ -19,4 +19,4 @@ const links = [
     }
 ]
 
-export default links;
+export default Links;
