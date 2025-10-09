@@ -10,18 +10,28 @@ function AboutMe() {
     return (
         <>
             <h1>About Me</h1>
-            <div css={AboutMeImg}>
-                <button onClick={() => ImgIdx === 0 ? setImgIdx(AboutMeImgs.length - 1) : setImgIdx((ImgIdx - 1) % AboutMeImgs.length)}>Last Image</button>
-                <img src={AboutMeImgs[ImgIdx].img_src} alt={AboutMeImgs[ImgIdx].img_alt}/>
-                <button onClick={() => setImgIdx((ImgIdx + 1) % AboutMeImgs.length)}>Next Image</button>
+            <div css={AboutMeStyle}>
+                <div css={AboutMeImg}>
+                    <button onClick={() => ImgIdx === 0 ? setImgIdx(AboutMeImgs.length - 1) : setImgIdx((ImgIdx - 1) % AboutMeImgs.length)}>Last Image</button>
+                    <img src={AboutMeImgs[ImgIdx].img_src} alt={AboutMeImgs[ImgIdx].img_alt}/>
+                    <button onClick={() => setImgIdx((ImgIdx + 1) % AboutMeImgs.length)}>Next Image</button>
+                </div>
+                
+                <p> temp text </p>
             </div>
-            <p> temp text </p>
         </>
     )
 }
 
 const AboutMeStyle = css({
-    color: 'red'
+    display: 'flex',
+    alignContent: 'center',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+
+    fontSize: '1.5rem',
+    lineHeight: '1',
+    color: 'var(--custom-black)'
 })
 
 const AboutMeImg = css({
