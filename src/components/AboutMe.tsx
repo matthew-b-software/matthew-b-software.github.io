@@ -11,10 +11,10 @@ function AboutMe() {
         <>
             <h1>About Me</h1>
             <div css={AboutMeStyle}>
-                <div css={AboutMeImg}>
-                    <button onClick={() => ImgIdx === 0 ? setImgIdx(AboutMeImgs.length - 1) : setImgIdx((ImgIdx - 1) % AboutMeImgs.length)}>Last Image</button>
+                <div css={AboutMeContainer}>
+                    <button css={AboutMeLButton} onClick={() => ImgIdx === 0 ? setImgIdx(AboutMeImgs.length - 1) : setImgIdx((ImgIdx - 1) % AboutMeImgs.length)}>Last Image</button>
                     <img src={AboutMeImgs[ImgIdx].img_src} alt={AboutMeImgs[ImgIdx].img_alt}/>
-                    <button onClick={() => setImgIdx((ImgIdx + 1) % AboutMeImgs.length)}>Next Image</button>
+                    <button css={AboutMeRButton} onClick={() => setImgIdx((ImgIdx + 1) % AboutMeImgs.length)}>Next Image</button>
                 </div>
                 
                 <p> temp text </p>
@@ -25,8 +25,7 @@ function AboutMe() {
 
 const AboutMeStyle = css({
     display: 'flex',
-    alignContent: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
 
     fontSize: '1.5rem',
@@ -34,8 +33,20 @@ const AboutMeStyle = css({
     color: 'var(--custom-black)'
 })
 
-const AboutMeImg = css({
-    color: 'red'
+const AboutMeContainer = css({
+    position: 'relative',
+})
+
+const AboutMeLButton = css({
+    position: 'absolute',
+    left: '0px',
+    top: '50%',
+})
+
+const AboutMeRButton = css({
+    position: 'absolute',
+    right: '0px',
+    top: '50%',
 })
 
 export default AboutMe
