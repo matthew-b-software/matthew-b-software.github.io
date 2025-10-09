@@ -10,13 +10,21 @@ function AboutMe() {
     return (
         <>
             <h1>About Me</h1>
-            <div></div>
+            <div css={AboutMeImg}>
+                <button onClick={() => ImgIdx === 0 ? setImgIdx(AboutMeImgs.length - 1) : setImgIdx((ImgIdx - 1) % AboutMeImgs.length)}>Last Image</button>
+                <img src={AboutMeImgs[ImgIdx].img_src} alt={AboutMeImgs[ImgIdx].img_alt}/>
+                <button onClick={() => setImgIdx((ImgIdx + 1) % AboutMeImgs.length)}>Next Image</button>
+            </div>
             <p> temp text </p>
         </>
     )
 }
 
-const  IntroStyle = css({
+const AboutMeStyle = css({
+    color: 'red'
+})
+
+const AboutMeImg = css({
     color: 'red'
 })
 

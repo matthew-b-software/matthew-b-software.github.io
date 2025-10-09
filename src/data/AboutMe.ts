@@ -1,10 +1,10 @@
 const AboutMeImgs = [
     {
-        img_path: "about_me/me_1.png",
+        img_src: "/about_me_imgs/Test_Img.jpg",
         img_alt: "a picture of me",
     },
     {
-        img_path: "about_me/me_2.png",
+        img_src: "/about_me_imgs/Test_Img.jpg",
         img_alt: "a picture of my dog",
     }
 ]
