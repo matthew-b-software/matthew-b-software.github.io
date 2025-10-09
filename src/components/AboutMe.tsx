@@ -12,15 +12,28 @@ function AboutMe() {
             <h1>About Me</h1>
             <div css={AboutMeStyle}>
                 <div css={AboutMeContainer}>
-                    <button css={AboutMeLButton} onClick={() => ImgIdx === 0 ? setImgIdx(AboutMeImgs.length - 1) : setImgIdx((ImgIdx - 1) % AboutMeImgs.length)}>Last Image</button>
+                    <button css={[AboutMeButton, AboutMeLButton]} onClick={() => changeImg(ImgIdx, AboutMeImgs.length, setImgIdx, true)}>
+                        <img src="/test_arrow.png" alt="Left Arrow"/>
+                    </button>
                     <img src={AboutMeImgs[ImgIdx].img_src} alt={AboutMeImgs[ImgIdx].img_alt}/>
-                    <button css={AboutMeRButton} onClick={() => setImgIdx((ImgIdx + 1) % AboutMeImgs.length)}>Next Image</button>
+                    <button css={[AboutMeButton, AboutMeRButton]} onClick={() => changeImg(ImgIdx, AboutMeImgs.length, setImgIdx, false)}>
+                        <img src="/test_arrow.png" alt="Right Arrow"/>
+                    </button>
                 </div>
                 
                 <p> temp text </p>
             </div>
         </>
     )
+}
+
+function changeImg(ImgIdx: number, Length: number, setImgIdx: (value: number) => void, IsLeft: boolean) {
+    console.log(ImgIdx)
+    if (IsLeft) {
+        ImgIdx === 0 ? setImgIdx(Length - 1) : setImgIdx((ImgIdx - 1) % Length)
+    } else {
+        setImgIdx((ImgIdx + 1) % Length)
+    }
 }
 
 const AboutMeStyle = css({
@@ -37,10 +50,23 @@ const AboutMeContainer = css({
     position: 'relative',
 })
 
+const AboutMeButton = css({
+    backgroundColor: 'var(--custom-green)',
+    maxHeight: '2.5rem',
+    maxWidth: '100%',
+    border: 'none',
+    padding: '0',
+
+    ':hover': {
+        cursor: 'pointer',
+    }
+})
+
 const AboutMeLButton = css({
     position: 'absolute',
     left: '0px',
     top: '50%',
+    backgroundColor: 'var(--custom-green)',
 })
 
 const AboutMeRButton = css({
